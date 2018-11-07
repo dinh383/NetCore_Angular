@@ -1,0 +1,77 @@
+﻿@model App.Data.Entities.RegisterConsultative
+<section id="contact">
+    <div class="container wow fadeInUp">
+        <div class="section-header">
+            <h3 class="section-title">THÔNG TIN ĐĂNG KÝ</h3>
+            <p class="section-description"></p>
+        </div>
+    </div>
+    <div class="container wow fadeInUp">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-4">
+                <h3>
+                    <a asp-controller="Home" asp-action="Index">
+                        SAGE HOME
+                    </a>
+                </h3>
+                <div class="fan-page">
+                    @await Component.InvokeAsync("LikePage")
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="info">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p>
+                            Địa chỉ: 9/7 Đường 51, Phường 14,
+                            Quận Gò Vấp, TP. Hồ Chí Minh
+                        </p>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p>Email: homestudy.edu.vn@gmail.com</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>Điện thoại: 0120.4528.462 - 01655.603.376</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="form">
+                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                    <div id="errormessage"></div>
+                    <form asp-controller="Introduce" asp-action="Home" method="post">
+                        <div class="form-group">
+                            <input asp-for="FullName" type="text" class="form-control" placeholder="Tên của bạn" data-rule="minlen:4" />
+                            <span asp-validation-for="FullName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Phone" type="text" class="form-control" placeholder="Số điện thoại" data-rule="minlen:4" />
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Email" type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea asp-for="Note" class="form-control" rows="5" placeholder="Ghi chú"></textarea>
+                            <span asp-validation-for="Note" class="text-danger"></span>
+                        </div>
+                        <div class="text-center-submit">
+                            <button type="submit">Gửi thông tin</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "PDF";
+    Layout = "~/Views/Shared/_LayoutPDF.cshtml";
+}
+
+@{
+//var urlPdf = "/test.pdf";
+//var urlPdf = "/file-upload/magazine/HotEnglish65.pdf";
+}
+<script>
+    var kDefaultURL = '@Html.Raw(ViewBag.PdfUrl)';
+</script>
+<script src="~/pdf/web/viewer.js"></script>
+

@@ -1,0 +1,88 @@
+﻿@model App.Model.ViewModel.QuestionVideoModel
+
+
+<style>
+    
+</style>
+@if (Model != null && Model.Questions.Any())
+{
+
+    var questionIdFirst = Model.Questions.FirstOrDefault().QuestionId;
+    var questionIdLast = Model.Questions.LastOrDefault().QuestionId;
+
+    <form asp-controller="ResourceVideo" asp-action="VideoDetail" method="post" class="form-question">
+        <div class="form-group col-md-6">
+            <!--Data Hidden-->
+            <input asp-for="ExamStructure.VideoLineId" value="@ViewBag.VideoLineId" type="hidden" class="form-control" />
+            <input asp-for="Exam.ExamName" type="hidden" class="form-control" />
+        </div>
+        <div class="container test-content">
+            <div class="section-header">
+                <h4 class="section-title">BÀI TEST</h4>
+            </div>
+            <div class='row question-item'>
+                <div class='col-md-12'>
+                    <div class="carousel slide question-group" data-ride="carousel" data-interval="false" id="quote-carousel">
+                        <!-- Carousel Slides / Quotes -->
+                        <div class="carousel-inner">
+
+                            <!-- Câu 1 -->
+                            @foreach (var question in Model.Questions.Select((value, index) => new { Value = value, Index = index }))
+                            {
+                                <input asp-for="Questions[question.Index].QuestionId" type="hidden" class="form-control" />
+                                <input asp-for="Questions[question.Index].QuestionName" type="hidden" class="form-control" />
+                                <input asp-for="Questions[question.Index].Answer" type="hidden" class="form-control" />
+                                <input asp-for="Questions[question.Index].AnswerExplain" type="hidden" class="form-control" />
+
+                                var isActive = question.Value.QuestionId == questionIdFirst;
+                                var status = isActive ? "active" : "";
+                                var questionOrder = @question.Index + 1;
+
+                                <div class="item @status">
+
+                                    <div class="row">
+                                        <div class="col-sm-1">
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <p>
+                                                <span class="question-order">Question @questionOrder:</span>    @question.Value.QuestionName
+                                            </p>
+                                            @if (question != null && question.Value.QuestionDetails.Any())
+                                            {
+                                                @foreach (var questionDetail in question.Value.QuestionDetails.Select((value, index) => new { Value = value, Index = index }))
+                                                {
+                                                    <div class="form-check question-item">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="" asp-for="Questions[question.Index].AnswerChoosed" value="@questionDetail.Value.AnswerPossobolity"> @questionDetail.Value.AnswerPossobolity
+                                                        </label>
+                                                    </div>
+                                                    <input asp-for="Questions[question.Index].QuestionDetails[questionDetail.Index].AnswerPossobolity" type="hidden" class="form-control" />
+
+                                                }
+                                                @if (question.Value.QuestionId == questionIdLast)
+                                                {
+                                                    <!--Btn Submit-->
+                                                    <div class="pull-right">
+                                                        <button type="submit" class="btn btn-gradient-success btn-rounded btn-fw">SEND</button>
+                                                    </div>
+                                                }
+                                            }
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            }
+
+                        </div>
+
+                        <!-- Carousel Buttons Next/Prev -->
+                        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+}

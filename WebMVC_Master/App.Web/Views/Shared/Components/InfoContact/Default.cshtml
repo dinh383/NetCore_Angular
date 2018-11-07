@@ -1,0 +1,79 @@
+﻿@model App.Data.Entities.RegisterConsultative
+<section id="contact" class="section-bg wow fadeInUp">
+    <div class="container">
+
+        <header class="section-header wow fadeInUp">
+            <h3>THÔNG TIN LIÊN HỆ</h3>
+            <p>
+                Lời khuyên cuối cùng dành cho các bạn học tiếng Anh: “Tiếng Anh không hề khó, chỉ là do bạn chưa học đúng phương
+                pháp mà thôi!
+            </p>
+        </header>
+
+
+        <div class="row contact-info">
+
+            <div class="col-md-4">
+                <div class="contact-address">
+                    <i class="ion-ios-location-outline"></i>
+                    <h3>Địa chỉ</h3>
+                    <address>9/7 Đường 51, Phường 14, Quận Gò Vấp, TP. Hồ Chí Minh</address>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="contact-phone">
+                    <i class="ion-ios-telephone-outline"></i>
+                    <h3>Điện thoại</h3>
+                    <p>
+                        <span>Mobile : </span><a href="tel:+84 0120.4528.462">0120.4528.462</a>
+                    </p>
+                    <p>
+                        <span>Viettel : </span><a href="tel:+84 01655.603.376">01655.603.376</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="contact-email">
+                    <i class="ion-ios-email-outline"></i>
+                    <h3>Email</h3>
+                    <p>
+                        <a href="homestudy.edu.vn@gmail.com">homestudy.edu.vn@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form">
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form asp-controller="RegisterConsultative" asp-action="Register" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input asp-for="FullName" type="text" class="form-control" placeholder="Tên của bạn" data-rule="minlen:4" />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input asp-for="Phone" type="text" class="form-control" placeholder="Số điện thoại" data-rule="minlen:4" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Email" type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <textarea asp-for="Note" class="form-control" rows="5" placeholder="Ghi chú"></textarea>
+                    <span asp-validation-for="Note" class="text-danger"></span>
+                </div>
+                <div class="text-center">
+                    <button type="submit">Gửi thông tin</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>

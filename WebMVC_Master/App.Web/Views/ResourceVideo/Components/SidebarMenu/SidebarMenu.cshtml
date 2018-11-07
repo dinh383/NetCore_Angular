@@ -1,0 +1,58 @@
+﻿@model IEnumerable<App.Data.Entities.Resource_Category>
+
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item nav-profile">
+            <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                    <img src="~/display-video-layout/images/faces/face1.jpg" alt="profile">
+                    <span class="login-status online"></span> <!--change to offline or busy as needed-->
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                    <span class="font-weight-bold mb-2">User</span>
+                    <span class="text-secondary text-small">Student</span>
+                </div>
+                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="ResourceVideo" asp-action="Home">
+                <span class="menu-title">Trang chủ</span>
+                <i class="mdi mdi-home menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Thể loại</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    @foreach (var category in Model)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="ResourceVideo" asp-action="VideosCategory"
+                               asp-route-categoryId="@category.CategoryId">@category.CategoryName</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </li>
+        @*<li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Đăng ký</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-basic2">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="#">Home Study</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Bản tin BBC</a></li>
+                </ul>
+            </div>
+        </li>*@
+
+
+    </ul>
+</nav>

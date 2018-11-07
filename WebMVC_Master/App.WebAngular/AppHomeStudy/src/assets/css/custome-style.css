@@ -1,0 +1,13 @@
+.dx-treeview .dx-treeview-toggle-item-visibility.dx-treeview-toggle-item-visibility-opened {
+    color: aliceblue !important;
+    font-size: 30px !important;
+}
+
+.dx-treeview .dx-treeview-toggle-item-visibility {
+    color: #c5c8cc !important;
+    font-size: 30px !important;
+}
+
+ul.dx-treeview-node-container {
+    background-color: #2a3f54 !important;
+}

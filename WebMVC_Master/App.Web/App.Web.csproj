@@ -1,0 +1,199 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_05_Dr. Fingers Vocabulary Clinic.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_06_Funny Products.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_07_Dicitonary Of Slang.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_08_Basic English.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_09_Living Abroad.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_10_Crank Call.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_11_Useful Advice.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_12_Noise Nuisance.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_13_Finger Grammar.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_14_British Bar Chat.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_15_British Bar Chat.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_16_US Bar Caht.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_17_US Bar Caht.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_18_Dump Us Laws.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_19_Great Moments Of US History.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_20_Story Time.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_21_Trivia.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_22_Typical Dialogues.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_23_Social English.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_24_Quiz.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_25_Quirky News.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_26_Song Garret Wall.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_27_Clever Criminals.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_28_Grammar Fun.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_29_Fluency Practice.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_30_Business English.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish65_31_Goodbye.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_01_Track 01.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_02_Track 02.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_03_Track 03.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_04_Track 04.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_05_Track 05.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_06_Track 06.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_07_Track 07.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_08_Track 08.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_09_Track 09.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_10_Track 10.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_11_Track 11.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_12_Track 12.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_13_Track 13.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_14_Track 14.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_15_Track 15.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_16_Track 16.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_17_Track 17.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_18_Track 18.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_19_Track 19.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_20_Track 20.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_21_Track 21.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_22_Track 22.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_23_Track 23.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_24_Track 24.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_25_Track 25.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_26_Track 26.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_27_Track 27.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_28_Track 28.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_29_Track 29.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish66_30_Track 30.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_01_Hot English CD 2007 welcome.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_02_Insect idioms.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_03_Little jokes.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_04_Graffiti.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_05_Dr fingers vocabulary clini.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_06_Dr fingers error correction.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_07_Dictionary of slang.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_08_Basic english.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_09_Living abroad.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_10_office humor.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_11_useful advice.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_12_stupid criminals.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_13_dr fingers grammar.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_14_british bar chat intro.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_15_british bar chat.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_16_dumb laws.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_17_story time.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_18_weird trivia.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_19_typical dialogues.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_20_social english - the interv.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_21_quiz - workplace bully.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_22_quirky news.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_23_hot science.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_24_horse quotes.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_25_grammar fun.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_26_fluency practice.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_27_business english.mp3" />
+    <Content Remove="wwwroot\file-upload\audio\magazine\HotEnglish67_28_Hot English CD 2007 bye.mp3" />
+    <Content Remove="wwwroot\file-upload\magazine\HotEnglish66.pdf" />
+    <Content Remove="wwwroot\file-upload\magazine\HotEnglish67.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\App.Configuaration\appsettings.Development.json" Link="appsettings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\App.Configuaration\appsettings.json" Link="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\contactform\contactform.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\npm.js" />
+    <None Include="wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+    <None Include="wwwroot\lib\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\lib\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\lib\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\lib\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\lib\vendor\bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\lib\vendor\bootstrap\js\bootstrap.js.map" />
+    <None Include="wwwroot\lib\vendor\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\lib\vendor\jquery\jquery.js" />
+    <None Include="wwwroot\lib\vendor\jquery\jquery.min.js" />
+    <None Include="wwwroot\lib\vendor\jquery\jquery.min.map" />
+    <None Include="wwwroot\lib\vendor\jquery\jquery.slim.js" />
+    <None Include="wwwroot\lib\vendor\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\lib\vendor\jquery\jquery.slim.min.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.CommonExtensions\App.CommonExtensions.csproj" />
+    <ProjectReference Include="..\App.Common\App.Common.csproj" />
+    <ProjectReference Include="..\App.Infrastructure\App.Infrastructure.csproj" />
+    <ProjectReference Include="..\App.Model\App.Model.csproj" />
+    <ProjectReference Include="..\App.Service\App.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\ResourceVideo\Components\SidebarMenu\SidebarMenu.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\Components\RegisterPageIntroduce\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\_LayoutPageChildDocument.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\_LayoutPageMagazine.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\_LayoutPDF.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\_LayoutError.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\ResourceVideo\Components\AnswerTest\AnswerTest.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\ResourceVideo\Components\VideosConcern\VideosConcern.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\ResourceVideo\Components\VideoForCategory\VideoForCategory.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\_LayoutDisplayVideo.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\_LayoutIntroduce.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Category\" />
+  </ItemGroup>
+
+</Project>

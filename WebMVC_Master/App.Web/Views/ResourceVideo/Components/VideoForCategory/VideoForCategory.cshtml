@@ -1,0 +1,64 @@
+﻿@model IList<App.Model.ViewModel.VideoForCategoryModel>
+@if (Model.Count > 0)
+{
+    @foreach (var item in Model)
+    {
+        <div class="content-item">
+            <div class="page-header">
+                <h3 class="page-title">
+                    <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                        <i class="mdi mdi-home"></i>
+                    </span>
+                    @item.Category.CategoryName
+                </h3>
+                <nav aria-label="breadcrumb">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item" aria-current="page">
+                            <a asp-controller="ResourceVideo" asp-action="VideosCategory" asp-route-categoryId="@item.Category.CategoryId">Xem thêm</a>
+                            <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class='col-md-12'>
+                <div class="carousel slide media-carousel" id="media_@item.Category.CategoryId">
+                    <div class="carousel-inner">
+                        @foreach (var group in item.GroupVideoForCategories)
+                        {
+                            <div class="item @group.Status">
+                                <div class="row">
+                                    @foreach (var video in group.Videos)
+                                    {
+                                        <div class="col-md-3 video-item">
+                                            <a asp-controller="ResourceVideo" asp-action="VideoDetail" asp-route-id="@video.LineId" class="thumbnail">
+                                                <img class="img-thumbnail" src="@video.UrlImage" />
+                                            </a>
+                                            <span class="title-video">
+                                                @video.VideoName <br />
+                                            </span>
+                                            @*<span class="view-video">
+                                                Nguồn Youtube <br />
+                                            </span>
+                                            <span class="view-video">
+                                                3,8 N lượt xem -
+                                            </span>
+                                            <span class="create-date">
+                                                11 tháng trước
+                                            </span>*@
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <a data-slide="prev" href="#media_@item.Category.CategoryId" class="left carousel-control">‹</a>
+                    <a data-slide="next" href="#media_@item.Category.CategoryId" class="right carousel-control">›</a>
+
+                </div>
+            </div>
+
+        </div>
+    }
+
+}

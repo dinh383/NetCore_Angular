@@ -1,0 +1,46 @@
+﻿@model IEnumerable<App.Data.Entities.Resource_Video>
+@{
+    ViewData["Title"] = "SearchVideo";
+    Layout = "~/Views/Shared/_LayoutDisplayVideo.cshtml";
+}
+<div class="header-search row">
+    <div class="result-search col-md-6">
+        <h4>
+            Có @ViewBag.TotalVideo kết quả tìm kiếm
+        </h4>
+    </div>
+    <div class="filter-search col-md-6">
+        @*<h4 class="pull-right">
+            Bộ lọc
+        </h4>*@
+    </div>
+    <hr />
+</div>
+@if (Model.Count() > 0)
+{
+    
+
+    <div class="row video-container-search">
+        @foreach (var video in Model)
+        {
+            <div class="col-md-3 item-img">
+                <a asp-controller="ResourceVideo" asp-action="VideoDetail" asp-route-id="@video.LineId" class="thumbnail">
+                    <img class="img-thumbnail img-video" src="@video.UrlImage" />
+                </a>
+            </div>
+            <div class="col-md-3 video-item">
+                <span class="title-video">
+                    @video.VideoName <br />
+                </span>
+                @*<span class="view-video">
+                    Nguồn Youtube <br />
+                </span>
+                <span class="view-video">
+                    3,8 N lượt xem
+                </span>*@
+            </div>
+        }
+
+    </div>
+
+}

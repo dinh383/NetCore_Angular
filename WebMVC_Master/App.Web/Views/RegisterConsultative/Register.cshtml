@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_LayoutPageChildRegister.cshtml";
+}
+
+<style>
+    #u_0_3 {
+        color: white !important;
+    }
+</style>
+<!-- Thông tin liên hệ-->
+@await Component.InvokeAsync("InfoContact")
+
+<!--Like and Comment facebook-->
+@await Component.InvokeAsync("LikeComment")
+
+<!-- Load Facebook SDK for JavaScript -->
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId=1702778753144671&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+<!-- Your embedded comments code -->
+<div class="fb-comments col-md-12" data-href="https://www.facebook.com/MinhTy0289/posts/2542072822683801" data-numposts="5"></div>

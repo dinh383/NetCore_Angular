@@ -1,0 +1,27 @@
+/*style for popup data grid*/
+.popup-action{
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+.btn-custom{
+    border: none !important;
+}
+.customer-template{
+    margin: -7px;
+}
+
+.second-group {
+    background-color: rgba(191, 191, 191, 0.15);
+    margin-top: 10px;
+    padding: 10px;
+    color: blue;
+    font-weight: bold;
+}
+
+.font-white{
+    color: white;
+}

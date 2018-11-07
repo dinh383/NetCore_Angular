@@ -1,0 +1,340 @@
+﻿@model App.Data.Entities.RegisterConsultative
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sage House</title>
+    <!-- Favicons -->
+    <link href="~/images/main-page/SAGEHOUSE.png" rel="icon">
+    <link href="~/images/main-page/SAGEHOUSE.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="~/introduce-layout/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="~/introduce-layout/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/introduce-layout/lib/animate/animate.min.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="~/introduce-layout/css/style.css" rel="stylesheet">
+    <!-- Main Stylesheet Introduce page -->
+    <link href="~/introduce-layout/css/css-introduce-page.css" rel="stylesheet" />
+    <!-- Css for mobile - ipad -->
+    <link href="~/introduce-layout/css/css-introduce-page-for-mobile.css" rel="stylesheet" />
+</head>
+<body>
+    @RenderBody()
+    <!--Header-->
+    <header id="header">
+        <div class="container">
+            <div id="logo" class="pull-left">
+                <h1>
+                    <a asp-controller="Home" asp-action="Index">
+                        <img class="img-logo" src="~/images/main-page/SAGEHOUSE.png" />
+                    </a>
+                    <a class="sage-home" asp-controller="Home" asp-action="Index">
+                        Sage House
+                    </a>
+                </h1>
+            </div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active"><a href="#contact">ĐĂNG KÝ TƯ VẤN</a></li>
+                </ul>
+            </nav>
+            <!-- #nav-menu-container -->
+        </div>
+    </header>
+    <!-- #header -->
+    <section id="hero">
+        <div class="hero-container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div id="errormessage"></div>
+                    <form asp-controller="Introduce" asp-action="Home" method="post">
+                        <div class="form-group">
+                            <h2>THÔNG TIN ĐĂNG KÝ</h2>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="FullName" type="text" class="form-control" placeholder="Tên của bạn" data-rule="minlen:4" />
+                            <span asp-validation-for="FullName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Phone" type="text" class="form-control" placeholder="Số điện thoại" data-rule="minlen:4" />
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Email" type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea asp-for="Note" class="form-control" rows="5" placeholder="Ghi chú"></textarea>
+                            <span asp-validation-for="Note" class="text-danger"></span>
+                        </div>
+                        <div class="text-center">
+
+                            <button type="submit">Gửi thông tin</button>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-7">
+                    <h1>CHÀO MỪNG ĐẾN VỚI SAGE HOUSE</h1>
+                    <h2>Sống và học tập Tiếng Anh với người nước ngoài</h2>
+                    <a href="#about" class="btn-get-started">Băt đầu</a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <main id="main">
+        <!--SAGE HOUSE – Ngôi nhà vui vẻ-->
+        <section id="about" class="info-material">
+            <div class="container">
+                <div class="row about-container">
+                    <div class="col-lg-6 content order-lg-1 order-2">
+                        <div class="section-header">
+                            <h3>SAGE HOUSE – Ngôi nhà vui vẻ</h3>
+                            <p class="description">
+                                Bạn muốn giao tiếp Tiếng Anh trôi chảy nhưng chưa tìm thấy động lực học tập. Bạn muốn giao tiếp với người nước ngoài nhưng không có môi trường thực hành? Hãy đến với Sage House – Ngôi nhà vui vẻ, nơi bạn trở nên hoàn hảo.
+                                Với công thức “Dạy hết sức - Học hết mình - Chơi nhiệt tình”. Tôi tin chắc chắn bạn sẽ có những trải nghiệm tuyệt vời nhất.
+                            </p>
+                            <p></p>
+                        </div>
+                        <div class="icon-box wow fadeInUp">
+                            <div class="icon"><i class="fa fa-arrow-up"></i></div>
+                            <h4 class="title">
+                                <a href="">
+                                    Phát triển khả năng ngôn ngữ
+                                </a>
+                            </h4>
+                            <p class="description">
+                                Học - Ăn - Ngủ - Nghỉ cùng những người bạn quốc tế và cả những người bạn Việt Nam cùng chung ước mơ chinh phục Tiếng Anh. Sống trong môi trường hoàn toàn Tây giúp bạn nâng cao khả năng phản xạ nghe, nói tiếng anh nhanh chóng và trôi chảy. Phương pháp chữa bệnh “câm” Tiếng Anh hiệu quả.
+                            </p>
+                        </div>
+                        <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="icon"><i class="fa fa-floppy-o"></i></div>
+                            <h4 class="title">
+                                <a href="">
+                                    Tiết kiệm chi phí
+                                </a>
+                            </h4>
+                            <p class="description">
+                                Thay vì mỗi tháng bạn phải gồng mình gánh quá nhiều khoản chi tiêu tiền trọ, sinh hoạt, ăn uống,… khi đến với Sage House số tiền này được chia sẻ cùng mọi người. Bạn không những tiết kiệm được kha khá một khoản tiền cho dự định tương lai mà còn chuẩn bị nền tảng kiến thức vững chắc. Một công đôi việc phải không nào!
+                            </p>
+                        </div>
+                        <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="icon"><i class="fa fa-refresh"></i></div>
+                            <h4 class="title">
+                                <a href="">
+                                    Hòa mình trong môi trường đa văn hóa
+                                </a>
+                            </h4>
+                            <p class="description">
+                                Tại đây, học viên không chỉ có môi trường thuận tiện để thực hành Tiếng Anh mà còn có cơ hội tìm hiểu vền văn hóa, phong tục, tập quán của nước bạn.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight">
+                        <img class="img-introduce-info img-thumbnail" src="~/introduce-layout/img/introduce/Co so vat chat.jpg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--MÔI TRƯỜNG SINH HOẠT VÀ HỌC TẬP HIỆU QUẢ-->
+        <section id="about">
+            <div class="container">
+                <div class="row about-container">
+                    <div class="col-lg-6">
+                        <img class="img-introduce-info img-thumbnail" src="~/introduce-layout/img/introduce/Đối tượng học viên.jpg" />
+                    </div>
+                    <div class="col-lg-6 content order-lg-1 order-2">
+                        <div class="section-header">
+                            <h3>MÔI TRƯỜNG SINH HOẠT VÀ HỌC TẬP HIỆU QUẢ</h3>
+                        </div>
+                        <div class="icon-box wow fadeInUp">
+                            <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+                            <h4 class="title">
+                                <a href="">
+                                    Không gian học tập thoải mái
+                                </a>
+                            </h4>
+                            <p class="description">
+                                Ngoài những khung giờ học Anh văn “hack não”, sinh hoạt tập thể vui vẻ. Khoảng thời gian còn lại chính là không gian riêng của bạn. Bạn không chỉ học ngôn ngữ mà còn luyện được nhiều bí kíp sống khác.
+                            </p>
+                        </div>
+                        <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="icon"><i class="fa fa-photo"></i></div>
+                            <h4 class="title">
+                                <a href="">
+                                    Cơ sở vật chất tiện nghi
+                                </a>
+                            </h4>
+                            <p class="description">
+                                Với mô hình ký túc xá, Sage House có đầy đủ các tiện nghi giường, bàn ghế học tập, máy lạnh, máy giặc, bếp nấu ăn … Bạn chỉ cần xách balo đến đây và trải nghiệm thôi nào.
+                            </p>
+                        </div>
+                        <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="icon"><i class="fa fa-map-marker"></i></div>
+                            <h4 class="title">
+                                <a href="">
+                                    Vị trí địa lý thuận tiện
+                                </a>
+                            </h4>
+                            <p class="description">
+                                Sage House nằm ngay trung tâm giúp các học viên di chuyển và kết nối thuận tiện giữa các khu vực khác trong thành phố. Vị trí địa lý đắc địa, chỉ với 5 phút bạn có thể đến ngay trạm xe bus, chợ, trung tâm thương mại, nhà sách, bệnh viện, rạp chiếu phim, công viên xanh,…Giờ thì nhấc điện thoại gọi cho đứa bạn thân cùng đến Sage House thôi nào!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Thông tin liên hệ-->
+        <section id="about">
+            <div class="container">
+                <div class="row about-container">
+                    <div class="col-lg-6 content order-lg-1 order-2">
+                        <div class="section-header">
+                            <h3>HOẠT ĐỘNG CỦA TRUNG TÂM</h3>
+                        </div>
+                        <div class="icon-box wow fadeInUp">
+                            <div class="icon"><i class="fa fa-users"></i></div>
+                            <h4 class="title">
+                                <a href="">
+                                    SỐNG - HỌC - CHƠI CÙNG TÂY
+                                </a>
+                            </h4>
+                            <p class="description">
+                                Điều cơ bản bạn cần khi đến với Sage House là mở rộng tư duy để đón cơn bão văn hóa từ các bạn trẻ quốc tế. Các bạn sống – học tập – sinh hoạt tập thể như đại gia đình.
+                            </p>
+                        </div>
+                        <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="icon"><i class="fa fa-male"></i></div>
+                            <h4 class="title">
+                                <a href="">
+                                    Học Tiếng Anh (Free) với giáo viên giàu kinh nghiệm giảng dạy
+                                </a>
+                            </h4>
+                            <p class="description">
+                                Lịch học chính của mỗi thành viên là 3 buổi/tuần (thứ 2-4-6 hoặc 3-5-7) được sắp xếp theo trình độ phù hợp và linh động với thời gian của bạn.
+                                Giáo trình được soạn theo sát khả năng và đáp ứng đầu ra của học viên, bên cạnh đó, trong mỗi giờ học được thiết kế các hoạt động xem phim, kể chuyện, hát nhạc,… giúp bạn luôn hứng thú, nhớ lâu và thực hành tốt.
+                            </p>
+                        </div>
+                        <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="icon"><i class="fa fa-angellist"></i></div>
+                            <h4 class="title">
+                                <a href="">
+                                    Tham gia English Club luyện kỹ năng chém gió, thuyết trình …
+                                </a>
+                            </h4>
+                            <p class="description">
+                                Khi tham gia câu lạc bộ bạn mong muốn điều gì? English Club hàng tuần giúp gắn kết các thành viên trong ngôi nhà chung. Bên cạnh kiến thức nền tảng, bạn được luyện tập và phát huy tối đa nhiều kỹ năng cần thiết khác như thuyết trình đa ngôn ngữ, chém gió xuyên lục địa và nhiều hoạt động thú vị khác
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight">
+                        <img class="img-introduce-info img-thumbnail" src="~/introduce-layout/img/introduce/english-club.jpg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Hình ảnh hoạt động-->
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <div class="section-header">
+                <h3 class="section-title">HÌNH ẢNH HOẠT ĐỘNG</h3>
+                <p></p>
+            </div>
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#demo" data-slide-to="4"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/images/intro-carousel/1.jpg" alt="Los Angeles">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/intro-carousel/2.jpg" alt="New York">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/intro-carousel/3.jpg" alt="New York">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/intro-carousel/4.jpg" alt="New York">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/intro-carousel/5.jpg" alt="New York">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+        <!--Địa chỉ trung tâm-->
+        <section id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h3>ĐỊA CHỈ TRUNG TÂM</h3>
+                </div>
+                <div class="row about-container">
+                    <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3918.560902170217!2d106.6418232!3d10.8448764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529604689ec05%3A0xe7eabed0862f56be!2zSG9tZSBTdHVkeSAtIEjhu41jIHRp4bq_bmcgQW5oIGPDuW5nIG5nxrDhu51pIGLhuqNuIHjDug!5e0!3m2!1svi!2s!4v1529910897445" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <!--THÔNG TIN ĐĂNG KÝ-->
+        @await Component.InvokeAsync("RegisterPageIntroduce")
+
+        <!-- #contact -->
+
+    </main>
+
+    <!--Footer-->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright by <strong>KLD Team</strong>. All Rights Versions
+            </div>
+            <div class="credits">
+            </div>
+        </div>
+    </footer>
+    <!-- #footer -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="~/introduce-layout/lib/jquery/jquery.min.js"></script>
+    <script src="~/introduce-layout/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="~/introduce-layout/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/introduce-layout/lib/easing/easing.min.js"></script>
+    <script src="~/introduce-layout/lib/wow/wow.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+    <script src="~/introduce-layout/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/introduce-layout/lib/counterup/counterup.min.js"></script>
+    <script src="~/introduce-layout/lib/superfish/hoverIntent.js"></script>
+    <script src="~/introduce-layout/lib/superfish/superfish.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="~/introduce-layout/contactform/contactform.js"></script>
+    <!-- Template Main Javascript File -->
+    <script src="~/introduce-layout/js/main.js"></script>
+
+</body>
+</html>

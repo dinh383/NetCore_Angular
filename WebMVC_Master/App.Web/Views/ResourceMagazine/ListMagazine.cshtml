@@ -1,0 +1,44 @@
+﻿@model IEnumerable<App.Data.Entities.Resource_Magazine>
+
+@{
+    ViewData["Title"] = "";
+    Layout = "~/Views/Shared/_LayoutPageMagazine.cshtml";
+}
+
+<style>
+    img.img-magazine {
+        width: 60%;
+        margin: auto 20%;
+    }
+</style>
+
+<section id="about">
+    <div class="container">
+
+        <header class="section-header">
+            <h3>TẠP CHÍ</h3>
+        </header>
+        <!-- Các khóa học -->
+        <div class="row about-cols">
+            @foreach (var magazine in Model)
+            {
+                <div class="col-md-4 wow fadeInUp">
+                    <div class="about-col">
+                        <div class="img">
+                            <a asp-controller="ResourceMagazine" asp-action="MagazineDetail" asp-route-magazineId="@magazine.MagazineId">
+                                <img src="~/file-upload/images/magazine/@magazine.MagazineImageUrl" alt="" class="img-magazine">
+                            </a>
+                        </div>
+                        <h2 class="title">
+                            <a asp-controller="ResourceMagazine" asp-action="MagazineDetail" asp-route-magazineId="@magazine.MagazineId">@magazine.MagazineName</a>
+                        </h2>
+                        <p class="info-courses">
+                            @magazine.Description
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</section>

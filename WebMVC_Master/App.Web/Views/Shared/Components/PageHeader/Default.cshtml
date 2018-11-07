@@ -1,0 +1,64 @@
+﻿<header id="header">
+    <div class="container-fluid">
+
+        <div id="logo" class="pull-left">
+            <h1>
+                <a asp-controller="Home" asp-action="Index">
+                    <img class="logo-home-study" src="~/images/main-page/logo_HomeStudy.png" />
+                </a>
+                <a asp-controller="Home" asp-action="Index" class="scrollto">Home Study</a>
+            </h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="#intro"><img src="~/images/logo.png" alt="" title="" /></a>-->
+        </div>
+
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active">
+                    <a asp-controller="Home" asp-action="Index">Trang chủ</a>
+                </li>
+                @*<li>
+                    <a asp-controller="Introduce" asp-action="Home">Giới thiệu</a>
+                </li>*@
+                <li class="menu-has-children">
+                    <a href="">Tài nguyên</a>
+                    <ul>
+                        <li>
+                            <a asp-controller="ResourceVideo" asp-action="Home">Video</a>
+                        </li>
+                        <li>
+                            <a asp-controller="ResourceMagazine" asp-action="ListMagazine">Tạp chí</a>
+                        </li>
+                    </ul>
+                </li>
+                @*<li>
+                    <a href="#portfolio">Đội ngũ giảng dạy</a>
+                </li>*@
+                @*<li>
+                    <a href="#team">Chuẩn đào tạo</a>
+                </li>*@
+                @*<li class="menu-has-children">
+                    <a href=""></a>
+                    <ul>
+                        <li>
+                            <a href="#">Tài liệu</a>
+                        </li>
+                        <li>
+                            <a href="#">Thư viện ảnh</a>
+                        </li>
+                        <li>
+                            <a href="#">Góc học viên</a>
+                        </li>
+                        <li>
+                            <a href="#">Tin tức</a>
+                        </li>
+                    </ul>
+                </li>*@
+                @*<li>
+                    <a asp-controller="RegisterConsultative" asp-action="Register">Đăng ký tư vấn</a>
+                </li>*@
+            </ul>
+        </nav>
+        <!-- #nav-menu-container -->
+    </div>
+</header>

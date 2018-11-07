@@ -1,0 +1,91 @@
+﻿
+/*Các khóa học*/
+div.img > img.img-fluid {
+    height: 230px;
+}
+
+.info-courses {
+    height: 140px;
+    text-align: justify;
+}
+
+.img.tour > img {
+    padding-left: 18%;
+}
+
+.img.english-club > img {
+    padding-left: 5%;
+}
+
+.description {
+    text-align: justify;
+}
+
+.logo-home-study {
+    height: 40px;
+    width: 80px;
+    background: white;
+    border-radius: 5px;
+}
+
+#header #logo h1 {
+    font-size: 20px !important;
+}
+
+#footer .footer-top .footer-info h3 {
+    font-size: 18px !important;
+}
+
+/* responsive facebook comment */
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style], .fb-comments span, .fb-comments iframe {
+    width: 100% !important;
+}
+
+/*Đội ngũ giáo viên*/
+.member > .img-fluid {
+    width: 250px;
+    height: 250px;
+}
+
+/*Đánh giá học viên*/
+.testimonial-item > .testimonial-img {
+    width: 120px;
+    height: 120px;
+}
+
+/*Menu*/
+#header.header-scrolled {
+    background-color: #092971eb !important;
+}
+
+#services {
+    background: #5aa3f129;
+}
+
+#testimonials {
+    background: #cde7ef5c;
+}
+
+
+#team {
+    background: #5aa3f129;
+}
+
+#contact {
+    background: #cde7ef5c;
+}
+
+.info-material {
+    margin-top: 20px;
+}
+
+.courses-item > .wow.bounceInUp {
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+    padding-top: 10px;
+    padding-right: -18px !important;
+    margin-right: 10px;
+    margin-left: -10px;
+    border-radius: 5px;
+    height: 180px;
+    background: #f6f7f95e;
+}

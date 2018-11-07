@@ -1,0 +1,47 @@
+﻿@model App.Model.ViewModel.QuestionVideoModel
+
+@if (Model != null && Model.Questions.Any())
+{
+    <div class="container test-result">
+        <div class="section-header">
+            <h4 class="section-title">KẾT QUẢ BÀI TEST</h4>
+        </div>
+        <!--Câu 1-->
+        @foreach (var question in Model.Questions.Select((value, index) => new { Value = value, Index = index }))
+        {
+            @if (question != null && question.Value.QuestionDetails.Any())
+            {
+                var questionOrder = @question.Index + 1;
+
+                <div class="wrap-answer">
+                    <p class="row">
+                        <span class="question-order">Question @questionOrder: </span>   @question.Value.QuestionName
+                    </p>
+                    @if (string.IsNullOrEmpty(question.Value.AnswerChoosed))
+                    {
+                       <p class=""><i class="answer-false mdi mdi-close-circle"></i>Chưa chọn đáp án cho câu hỏi này!</p>
+                    }
+                    <div class="row item-question-result">
+                        <ol>
+                            @foreach (var questionDetail in question.Value.QuestionDetails)
+                            {
+                                var isTrue = question.Value.Answer.ToLower() == @questionDetail.AnswerPossobolity.ToLower();
+                                var classTrue = isTrue ? "answer-true mdi mdi-check-circle" : "";
+                                var classFalse = questionDetail.IsCorrect == false ? "answer-false mdi mdi-close-circle" : "";
+                                <li><i class="@classTrue @classFalse"></i> @questionDetail.AnswerPossobolity</li>
+                            }
+                        </ol>
+                    </div>
+                    <!--Lời giải-->
+                    <div class="row col-md-12">
+                        <p class="pull-right answer-explain">Giải thích: @question.Value.AnswerExplain</p>
+                    </div>
+                </div>
+            }
+        }
+
+        <div class="test-score row">
+            <h4>Số câu trả lời đúng: @Model.Exam.QtyCorrect / @Model.Exam.TotalScore</h4>
+        </div>
+    </div>
+}

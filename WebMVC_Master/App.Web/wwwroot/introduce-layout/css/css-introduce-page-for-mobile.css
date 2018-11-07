@@ -1,0 +1,43 @@
+﻿
+.video-concern {
+    overflow-y: scroll !important;
+}
+
+.text-center > button {
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    background: #a29797;
+    font-size: 15px;
+    width: 23%;
+    height: 36px;
+}
+
+#hero .hero-container {
+    padding-left: 40px;
+}
+
+@media only screen and (max-width: 360px) {
+    .text-center > button {
+        width: 36%;
+        height: 37px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .text-center > button {
+        width: 30%;
+        height: 42px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .row {
+        padding-top: 70px;
+        padding-right: 5%;
+    }
+}
+
+.text-center-submit {
+    text-align: center;
+}

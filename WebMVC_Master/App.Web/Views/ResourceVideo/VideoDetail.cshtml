@@ -1,0 +1,197 @@
+﻿@*@model App.Data.Entities.Resource_Video*@
+@{
+    ViewData["Title"] = "VideoDetail";
+    Layout = "~/Views/Shared/_LayoutDisplayVideo.cshtml";
+
+}
+
+<style>
+
+    .form-check .form-check-label input[type="radio"] + .input-helper:before {
+        width: 15px;
+        height: 15px;
+    }
+
+    /* carousel */
+    #quote-carousel {
+        padding: 0 10px 30px 10px;
+        margin-top: 30px;
+    }
+
+        /* Control buttons  */
+        #quote-carousel .carousel-control {
+            background: none;
+            color: #222;
+            font-size: 2.3em;
+            text-shadow: none;
+            margin-top: 30px;
+        }
+            /* Previous button  */
+            #quote-carousel .carousel-control.left {
+                left: -12px;
+            }
+            /* Next button  */
+            #quote-carousel .carousel-control.right {
+                right: -12px !important;
+            }
+        /* Changes the position of the indicators */
+        #quote-carousel .carousel-indicators {
+            right: 50%;
+            top: auto;
+            bottom: 0px;
+            margin-right: -19px;
+        }
+            /* Changes the color of the indicators */
+            #quote-carousel .carousel-indicators li {
+                background: #c0c0c0;
+            }
+
+            #quote-carousel .carousel-indicators .active {
+                background: #333333;
+            }
+
+        #quote-carousel img {
+            width: 250px;
+            height: 100px
+        }
+    /* End carousel */
+
+    .item blockquote {
+        border-left: none;
+        margin: 0;
+    }
+
+        .item blockquote img {
+            margin-bottom: 10px;
+        }
+
+        .item blockquote p:before {
+            content: "\f10d";
+            font-family: 'Fontawesome';
+            float: left;
+            margin-right: 10px;
+        }
+
+    .title-test {
+        text-align: center;
+    }
+
+    .item-question-result {
+        width: 100%;
+    }
+
+    i.answer-true.mdi {
+        display: inline-block;
+        font-size: 15px;
+        width: 20px;
+        text-align: left;
+        color: #4cff00;
+    }
+
+    i.answer-false.mdi {
+        display: inline-block;
+        font-size: 15px;
+        width: 20px;
+        text-align: left;
+        color: #ff0000;
+    }
+
+    a.ytp-youtube-button.ytp-button.yt-uix-sessionlink {
+        display: none !important;
+    }
+
+    .answer-explain {
+        font-weight: bold;
+    }
+
+    .question-group {
+        height: 265px;
+    }
+
+    .form-check.question-item :hover {
+        background-color: aquamarine;
+    }
+    .question-group {
+        height: 265px;
+    }
+
+    .question-order {
+        font-weight: bold;
+    }
+
+    .form-question {
+        background: #fafafa;
+        border-radius: 5px;
+        height: 330px;
+        margin-bottom: 10px;
+    }
+</style>
+
+
+<head>
+  
+</head>
+
+<div class="wrap-video-detail row">
+    <div class="col-md-8 video-container">
+        <div class="video-youtube row">
+            @*<iframe src="@Model.UrlUseIframe"
+                frameborder="0" allowfullscreen></iframe>*@
+
+            <iframe src="@Model.UrlUseIframe? theme=light&autoplay=0&vq=hd720&wmode=opaque&rel=0&showinfo=0&modestbranding=1&version=3&ps=docs&nologo=1&color=white&iv_load_policy=0&cc_load_policy=1" height="400" width="100%" allowfullscreen="" frameborder="0"></iframe>
+            @*<iframe width="741" height="417" src="https://www.youtube.com/embed/CF_U1LW8ap8?modestbranding=1&amp;title=&amp;autohide=1&amp;wmode=transparent&amp;rel=0&amp;showinfo=0&amp;theme=light" frameborder="0" allowfullscreen=""></iframe>*@
+        </div>
+        <div class="title-video-youtube row">
+            <h4>
+                @Model.VideoName
+            </h4>
+            <p class="overflow-ellipsis video-description">
+                @Model.Description
+            </p>
+        </div>
+   
+        <!--BÀI TEST-->
+        @await Component.InvokeAsync("QuestionsVideo", new { videoLineId = ViewBag.VideoLineId })
+
+        <!--KẾT QUẢ TEST-->
+        @if (ViewBag.IsPostVideoDetal == true)
+        {
+            @await Component.InvokeAsync("AnswerTest")
+        }
+
+        <div class="plugin-facebook row">
+            <!-- Your like button code -->
+            <div class="fb-like"
+                 data-href="https://www.facebook.com/homestudy.edu.vn/"
+                 data-layout="standard"
+                 data-action="like"
+                 data-show-faces="true">
+            </div>
+            <!-- Your share button code -->
+            <div class="fb-share-button"
+                 data-href="http://homestudy.edu.vn/video-detail.html?id=@ViewBag.VideoLineId"
+                 data-layout="button_count">
+            </div>
+            <!-- Your embedded comments code -->
+            <div class="fb-comments col-md-12" data-href="https://www.facebook.com/MinhTy0289/posts/@ViewBag.VideoLineId" data-numposts="5"></div>
+        </div>
+
+    </div>
+    <div class="col-sm-4 video-concern row">
+        <div class="row video-container-right">
+            @await Component.InvokeAsync("VideosConcern", new { id = Model.LineId })
+        </div>
+    </div>
+
+</div>
+
+<!-- Load Facebook SDK for JavaScript -->
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId={@ViewBag.AppFacebookId}&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>

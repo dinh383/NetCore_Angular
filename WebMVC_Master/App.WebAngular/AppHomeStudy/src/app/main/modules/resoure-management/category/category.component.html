@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title">
+        <h2>
+          <i class="fa fa-bars"></i> DANH SÁCH THỂ LOẠI</h2>
+        <div class="clearfix">
+        </div>
+      </div>
+      <div class="x_content">
+        <dx-data-grid id="gridContainer" [dataSource]="dataSource" [height]="heightGrid" [remoteOperations]="true" [columnAutoWidth]="true" (onContentReady)="onContentReady($event)"
+          keyExpr="lineId">
+          <!-- Tìm kiếm tất cả -->
+          <dxo-search-panel [visible]="true" [width]="240" [placeholder]="placeholderSearch"></dxo-search-panel>
+          <dxo-filter-row [visible]="true"></dxo-filter-row>
+          <dxo-header-filter [visible]="true"></dxo-header-filter>
+
+          <dxo-paging [pageIndex]="pageIndex" [pageSize]="pageSize"></dxo-paging>
+          <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[5, 10, 20]" [showInfo]="true">
+          </dxo-pager>
+          <dxo-editing mode="form" [allowAdding]="true" [allowUpdating]="true" [allowDeleting]="true"></dxo-editing>
+
+          <dxi-column dataField="categoryId"  caption="Mã loại" [fixed]="true" [allowEditing]="false" [width]="70"></dxi-column>
+          <dxi-column dataField="categoryName" caption="Tên loại" [fixed]="true"></dxi-column>
+          <dxi-column dataField="description" caption="Mô tả"></dxi-column>
+          
+          <dxi-column dataField="stop" caption="Chưa kích hoạt"></dxi-column>
+          <dxi-column dataField="createDate" format="dd/MM/yyyy, HH:mm:ss" dataType="date" caption="Ngày tạo" [allowEditing]="false" ></dxi-column>
+          <dxi-column dataField="createByUser" caption="Người tạo" [allowEditing]="false" ></dxi-column>
+          <dxi-column dataField="updtDate" format="dd/MM/yyyy, HH:mm:ss" dataType="date" caption="Ngày cập nhật" [allowEditing]="false" ></dxi-column>
+          <dxi-column dataField="updtByUser" caption="Người cập nhật" [allowEditing]="false" ></dxi-column>
+        </dx-data-grid>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button Footer -->
+<!-- <app-button-control [lstButtonLink]="lstButtonLink"></app-button-control> -->

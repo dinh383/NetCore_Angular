@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AppHomeStudy\node_modules\ansi-html\**" />
+    <Compile Remove="AppSmartCard\node_modules\**" />
+    <EmbeddedResource Remove="AppHomeStudy\node_modules\ansi-html\**" />
+    <EmbeddedResource Remove="AppSmartCard\node_modules\**" />
+    <None Remove="AppHomeStudy\node_modules\ansi-html\**" />
+    <None Remove="AppSmartCard\node_modules\**" />
+  </ItemGroup>
+
+</Project>

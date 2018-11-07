@@ -1,0 +1,68 @@
+
+<style>
+    .dx-treeview .dx-treeview-toggle-item-visibility.dx-treeview-toggle-item-visibility-opened {
+        color: aliceblue !important;
+        font-size: 30px !important;
+    }
+
+    .dx-treeview .dx-treeview-toggle-item-visibility {
+        color: #c5c8cc !important;
+        font-size: 30px !important;
+    }
+</style>
+<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+    <div class="menu_section">
+        <h3>{{userName}}</h3>
+        <br/>
+        <!-- <ul class="nav side-menu">
+            <li>
+                <a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu" style="display: none">
+                    <li>
+                        <a routerLink="/main/home/index">Index</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a><i class="fa fa-home"></i> Location <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu" style="display: none">
+                    <li>
+                        <a routerLink="/main/location/import">Import</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a><i class="fa fa-edit"></i> Smart <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu" style="display: none">
+                    <li>
+                        <a routerLink="/main/smart/index">List smart</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a><i class="fa fa-edit"></i> User <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu" style="display: none">
+                    <li>
+                        <a routerLink="/main/user/index">List User</a>
+                    </li>
+
+                </ul>
+            </li>
+
+
+        </ul> -->
+
+        <div class="form">
+            <dx-text-box #textBox placeholder="Search" [width]="widthSidebar" mode="search" valueChangeEvent="keyup" value=""></dx-text-box>
+            <dx-tree-view id="simple-treeview" [items]="lstMenu" [height]="heightMenu" [width]="widthSidebar" [searchValue]="textBox.value" (onItemClick)="selectItem($event)">
+            </dx-tree-view>
+
+        </div>
+
+    </div>
+
+</div>

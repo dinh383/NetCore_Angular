@@ -1,0 +1,24 @@
+﻿@model IEnumerable<App.Data.Entities.Resource_Video>
+@if (Model.Count() > 0)
+{
+    foreach (var video in Model)
+    {
+        <div class="col-md-6 item-img">
+            <a asp-controller="ResourceVideo" asp-action="VideoDetail" asp-route-id="@video.LineId" class="thumbnail">
+                <img class="img-thumbnail img-video" src="@video.UrlImage" />
+            </a>
+        </div>
+        <div class="col-md-6 video-item">
+            <span class="title-video">
+                @video.VideoName <br />
+            </span>
+            @*<span class="view-video">
+                Nguồn Youtube <br />
+            </span>
+            <span class="view-video">
+                3,8 N lượt xem
+            </span>*@
+        </div>
+
+    }
+}
